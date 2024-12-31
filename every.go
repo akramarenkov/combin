@@ -1,4 +1,4 @@
-// Library that allows you to generate combinations.
+// Library that allows you to drawn combinations.
 package combin
 
 import (
