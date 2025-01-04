@@ -272,6 +272,18 @@ func BenchmarkEverySize(b *testing.B) {
 	require.Equal(b, uint64(1<<15-1), size)
 }
 
+func BenchmarkReference(b *testing.B) {
+	var number int
+
+	for range b.N {
+		for number = range 1<<15 - 1 {
+			_ = number
+		}
+	}
+
+	require.Equal(b, 1<<15-2, number)
+}
+
 func BenchmarkEvery(b *testing.B) {
 	slice := seq.Linear(15, 1)
 
