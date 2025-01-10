@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Library that allows you to drawn combinations
+Library that provides to drawn combinations
 
 ## Usage
 
