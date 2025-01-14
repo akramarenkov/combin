@@ -10,6 +10,10 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+type intAlias []int
+
+func (ia intAlias) Method() {}
+
 func TestEveryZero(t *testing.T) {
 	expected := [][]int{}
 
@@ -23,6 +27,17 @@ func TestEvery1(t *testing.T) {
 	}
 
 	testEvery(t, seq.Linear(1, 1), expected)
+}
+
+func TestEveryAlias(t *testing.T) {
+	source := intAlias{1}
+
+	for combination := range Every(source) {
+		combination.Method()
+	}
+
+	require.Equal(t, uint64(1), EveryQuantity(source).Uint64())
+	require.Equal(t, uint64(1), EverySize(source))
 }
 
 func TestEvery21(t *testing.T) {

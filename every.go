@@ -14,13 +14,13 @@ import (
 // combination.
 //
 // The returned slice of combination is valid only for current iteration of the loop.
-func Every[Type any](source []Type) iter.Seq[[]Type] {
-	iterator := func(yield func([]Type) bool) {
+func Every[Slice ~[]Type, Type any](source Slice) iter.Seq[Slice] {
+	iterator := func(yield func(Slice) bool) {
 		if len(source) == 0 {
 			return
 		}
 
-		combination := make([]Type, len(source))
+		combination := make(Slice, len(source))
 		shifts := make([]int, len(source))
 		ids := make([]int, len(source))
 
