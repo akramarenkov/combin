@@ -12,7 +12,7 @@ import (
 
 type intAlias []int
 
-func (ia intAlias) Method() {}
+func (intAlias) Method() {}
 
 func TestEveryZero(t *testing.T) {
 	expected := [][]int{}
