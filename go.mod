@@ -1,6 +1,6 @@
 module github.com/akramarenkov/combin
 
-go 1.23.4
+go 1.24
 
 require (
 	github.com/akramarenkov/safe v0.20.2
