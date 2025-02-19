@@ -5,7 +5,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/akramarenkov/safe/intspec"
+	"github.com/akramarenkov/intspec"
 	"github.com/akramarenkov/seq"
 	"github.com/stretchr/testify/require"
 )

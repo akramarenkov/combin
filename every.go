@@ -5,8 +5,8 @@ import (
 	"iter"
 	"math/big"
 
+	"github.com/akramarenkov/intspec"
 	"github.com/akramarenkov/safe"
-	"github.com/akramarenkov/safe/intspec"
 )
 
 // A range iterator over every possible combinations (of length from 1 to the length
